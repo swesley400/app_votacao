@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 const { initializeApp } = require("firebase/app")
-const { getFirestore, collection, getDocs, addDoc } = require( 'firebase/firestore/lite');
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyDd09ijuJuZ0jCDkaDV0fFZvDqSV-sx33s",
