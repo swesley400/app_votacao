@@ -6,13 +6,15 @@ const db = getFirestore(app)
 
 
 async function lerCandidatosFirebase(){
-    const canditato = await getDocs(collection(db, "canditato"));
-    const candidatoABC = await canditato
-    candidatoABC.forEach((doc) => {
-       var dados = doc.data()
-       return  dados
-       
-    });
+    try{
+        const aguardaDadosDoCanditoDoBanco = await getDocs(collection(db, "canditato"));
+        const pegaOArrayComTodasAsInformacoesDoBanco = aguardaDadosDoCanditoDoBanco
+        const transformaEmArrayCandidatos = pegaOArrayComTodasAsInformacoesDoBanco .docs.map(element => element.data() )
+        return transformaEmArrayCandidatos
+    }
+    catch{
+       (err) => {console.log("Houve um erro", err)}
+    }
     
 }
 
