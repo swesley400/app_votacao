@@ -1,13 +1,18 @@
 const express = require('express')
 const router = express.Router()
 
-const votar = require("../controllers/votar")
+const Votar = require("../controllers/votar.js")
 
 router.post("/votar", async(req, res) => {
-    const voto = req.body
-    const votando = new votar(voto.id, voto.candidato)
-    votando.addVoto()
-    res.status(201).json(voto) 
+    try{
+        const voto = req.body
+        const votando = new Votar(voto.id, voto.candidato)
+        votando.addVoto()
+        res.status(201).json({status: "Voto feito com sucesso"}) 
+    }
+    catch(erro){
+        console.log("Houve um erro na votacao", erro)
+    }
 })
 
 module.exports = router

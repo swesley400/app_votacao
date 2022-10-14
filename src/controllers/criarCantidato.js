@@ -12,11 +12,16 @@ class Candidato {
         this.urlImg = urlImg
     }
     async fazUpNoBanco(){
-        const docRef= await addDoc(collection(db,'canditato'),
-            this.pegaCandidato()
-        )
-        console.log("id: ", docRef.id)
-        return console.log("Candidato criado no banco com sucesso")
+        try{
+            const docRef= await addDoc(collection(db,'canditato'),
+                this.pegaCandidato()
+            )
+            console.log("id: ", docRef.id)
+            return console.log("Candidato criado no banco com sucesso")
+        }
+        catch(erro){
+            console.log("Houve um erro", erro)
+        }
     }
     pegaCandidato(){
         const candidato = {

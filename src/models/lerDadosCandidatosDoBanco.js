@@ -20,8 +20,8 @@ async function lerCandidatosFirebase(){
             candidatos
         }
     }
-    catch{
-       (err) => {console.log("Houve um erro", err)}
+    catch(erro){
+        console.log("Houve um erro", erro)
     }
     
 }
