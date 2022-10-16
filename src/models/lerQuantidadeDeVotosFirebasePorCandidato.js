@@ -16,6 +16,7 @@ async function lerQuantidadeDeVotosFirebasePorCandidato(id){
         
     }
     catch(erro){
+        
          console.log("Houve um erro", erro)
     }
     return
