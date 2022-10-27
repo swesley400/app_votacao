@@ -13,6 +13,6 @@ app.use(cors())
 app.use(candidatos)
 app.use(votar)
 
-app.listen(porta, () => {
+app.listen(process.env.PORT || porta, () => {
     console.log("Servidor iniciado com sucesso em http://localhost:3000")
 })
