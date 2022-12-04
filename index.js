@@ -3,7 +3,7 @@ const cors = require('cors')
 
 const app = express()
 
-const porta = process.env.PORT || 3000
+const porta = 3000
 
 const candidatos = require('./src/routes/candidatos')
 const votar = require('./src/routes/votar.js')
