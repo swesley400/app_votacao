@@ -2,6 +2,8 @@ const { getFirestore, collection, addDoc } = require( 'firebase/firestore/lite')
 const app = require('../models/conexao')
 const db = getFirestore(app)
 
+const padronizaJsonDeCandidatos = require("./config/padronizaObjetoCandidatosVindoDoBanco")
+
 class Candidato {
     constructor(id,numero, nome, partido, quantidadeDeVotos, urlImg){
         this.id = id,

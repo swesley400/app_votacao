@@ -1,6 +1,6 @@
 class padronizaJsonDeCandidatos {
 
-    constructor(doc, id, nome, partido, numero,quantida_de_votos, urlImg ){
+    constructor(doc, id, nome, partido, numero,quantida_de_votos, urlImg, porcetagemDeVotos ){
         this.doc = doc,
         this.id = id,
         this.nome = nome,
@@ -8,6 +8,7 @@ class padronizaJsonDeCandidatos {
         this.numero = numero,
         this.quantidade_de_votos = quantida_de_votos
         this.urlImg = urlImg
+        this.porcetagemDeVotos = porcetagemDeVotos
 
     }
 
@@ -23,7 +24,8 @@ class padronizaJsonDeCandidatos {
         this.partido,
         this.numero,
         this.quantidade_de_votos,
-        this.urlImg
+        this.urlImg,
+        this.porcetagemDeVotos
     }
 
 
