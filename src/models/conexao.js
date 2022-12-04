@@ -3,13 +3,13 @@ const { initializeApp } = require("firebase/app")
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDd09ijuJuZ0jCDkaDV0fFZvDqSV-sx33s",
-  authDomain: "votacao-d490f.firebaseapp.com",
-  projectId: "votacao-d490f",
-  storageBucket: "votacao-d490f.appspot.com",
-  messagingSenderId: "643346922184",
-  appId: "1:643346922184:web:bc8cac395bd0c08ba843fd",
-  measurementId: "G-QCHLNHYVKE"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 // Initialize Firebase
